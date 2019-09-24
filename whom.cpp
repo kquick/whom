@@ -2,7 +2,7 @@
 #include <string.h>
 #include "gc.h"
 
-const std::string whom()
+const std::string who_ami(int nc)
 {
-    return strcpy((char*)GC_MALLOC(10), "pardner");
+    return strcpy((char*)GC_MALLOC(nc), "pardner");
 }
