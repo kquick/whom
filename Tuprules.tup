@@ -1,3 +1,9 @@
+export NIX_TARGET_CFLAGS_COMPILE
+export NIX_TARGET_LDFLAGS
+
+CFLAGS=${NIX_TARGET_CFLAGS_COMPILE} @(CFLAGS)
+LDFLAGS=${NIX_TARGET_LDFLAGS} @(LDFLAGS)
+
 !cc = |> g++ $(CFLAGS) -o %o -c %f |> %o
 !ar = |> ar crs %o %f |> lib%d.a
 
