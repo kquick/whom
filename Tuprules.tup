@@ -1,0 +1,3 @@
+!cc = |> g++ $(CFLAGS) -o %o -c %f |> %o
+!ar = |> ar crs %o %f |> lib%d.a
+
